@@ -17,17 +17,20 @@ Scrambler scrambler = new Scrambler()
 
 android {
     namespace 'com.CrimsonVeilDev'
-    compileSdk 34
+    compileSdk 35
     
     signingConfigs {
         debug {
             storeFile file("zen.jks")
+            // NOTE: Use environment variables or local.properties for credentials
+            // Example: storePassword System.getenv("KEYSTORE_PASSWORD")
             storePassword "11111111"
             keyPassword "11111111"
             keyAlias "key0"
         }
         release {
             storeFile file("zen.jks")
+            // NOTE: Use environment variables or local.properties for credentials in production
             storePassword "11111111"
             keyPassword "11111111"
             keyAlias "key0"
@@ -41,8 +44,7 @@ android {
     defaultConfig {
         applicationId "com.CrimsonVeilDev"
         minSdk 24
-        //noinspection OldTargetApi,EditedTargetSdkVersion,ExpiredTargetSdkVersion
-        targetSdk 28
+        targetSdk 35
         versionCode 1
         versionName "2024.09.21"
 
@@ -81,8 +83,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
     lsparanoid {
         seed = 1919810
@@ -96,26 +98,37 @@ android {
     }
 
     externalNativeBuild {
-        ndkBuild {
-            path file('src/main/jni/Android.mk')
+        cmake {
+            path file('src/main/cpp/CMakeLists.txt')
         }
-
     }
-    ndkVersion "24.0.8215888"
+    ndkVersion "25.2.9519653"
 }
 
 dependencies {
-    implementation fileTree(dir: "libs", includes: ["*aar"])
+    implementation fileTree(dir: "libs", includes: ["*.aar"])
     implementation project(':Bcore')
     
-    implementation 'androidx.appcompat:appcompat:1.2.0'
+    // AndroidX - Latest versions
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'androidx.core:core:1.15.0'
     implementation 'androidx.cardview:cardview:1.0.0'
-    implementation 'com.google.android.material:material:1.11.0'
-    implementation 'net.lingala.zip4j:zip4j:2.9.0'
+    
+    // Material Design 3
+    implementation 'com.google.android.material:material:1.12.0'
+    
+    // Network & IO
+    implementation 'net.lingala.zip4j:zip4j:2.11.5'
     implementation 'com.squareup.okhttp3:okhttp:4.12.0'
     implementation 'com.squareup.okio:okio:3.9.0'
-    implementation 'com.github.tiann:FreeReflection:3.2.2'
+    
+    // Reflection utilities
     implementation 'com.github.tiann:FreeReflection:3.2.2'
     implementation 'com.github.CodingGay.BlackReflection:core:1.1.4'
-    annotationProcessor 'com.github.CodingGay.BlackReflection:compiler:1.1.4'    // Or if you need the core modul
+    annotationProcessor 'com.github.CodingGay.BlackReflection:compiler:1.1.4'
+    
+    // Testing
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 }
