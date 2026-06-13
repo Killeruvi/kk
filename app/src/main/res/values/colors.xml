@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Crimson Vampire Theme Palette -->
+    <color name="vampire_crimson">#8C0000</color>
+    <color name="vampire_blood_red">#4A0000</color>
+    <color name="vampire_dark_bg">#1A0000</color>
+    <color name="vampire_accent">#BC4A4A</color>
+    <color name="vampire_text_light">#E0E0E0</color>
+    
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="button">#FF40CC7E</color>
+    <color name="primaryText">#2B2E4A</color>
+</resources>

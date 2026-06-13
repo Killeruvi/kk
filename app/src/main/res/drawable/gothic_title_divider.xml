@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    
+    <!-- Gradient from transparent to blood red and back -->
+    <gradient
+        android:startColor="#00FF0000"
+        android:centerColor="#FFFF1A1A"
+        android:endColor="#00FF0000"
+        android:angle="0" />
+    
+    <!-- Optional: Add a slight corner rounding -->
+    <corners android:radius="2dp" />
+    
+</shape>

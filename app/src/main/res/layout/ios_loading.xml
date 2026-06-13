@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialogContainer"
+    android:layout_height="wrap_content"
+    android:layout_width="280dp"
+    android:gravity="center_horizontal"
+    android:background="@drawable/gothic_popup_bg"
+    android:elevation="16dp"
+    android:padding="24dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/loadingIcon"
+        android:layout_height="56dp"
+        android:layout_width="56dp"
+        android:src="@drawable/crimson_lunar_core"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/loadingText"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="16dp"
+        android:letterSpacing="0.02"
+        android:text="Logging in..." />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_height="6dp"
+        android:layout_width="match_parent"
+        android:indeterminate="true"
+        android:layout_marginTop="16dp"
+        android:indeterminateTint="#FFFF2A2A"
+        android:progressTint="#FFFF2A2A" />
+
+    <TextView
+        android:id="@+id/progressText"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:textSize="13sp"
+        android:textColor="#8CFFFFFF"
+        android:layout_marginTop="8dp"
+        android:letterSpacing="0.05"
+        android:text="Preparing..." />
+
+    <Button
+        android:id="@+id/okButton"
+        android:layout_height="48dp"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/gothic_button_bg"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:text="OK" />
+
+</LinearLayout>

@@ -1,0 +1,50 @@
+{
+  "allFiles": [
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/LoaderSource/app/src/main/AndroidManifest.xml",
+      "selection": {
+        "end": {
+          "column": 24,
+          "index": 2941,
+          "line": 54
+        },
+        "start": {
+          "column": 24,
+          "index": 2941,
+          "line": 54
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/LoaderSource/Bcore/src/main/java/top/niunaijun/blackbox/proxy/ProxyVpnService.java",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        },
+        "start": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/LoaderSource/Bcore/src/main/java/top/niunaijun/blackbox/fake/service/VpnCommonProxy.java",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 1264,
+          "line": 37
+        },
+        "start": {
+          "column": 0,
+          "index": 1264,
+          "line": 37
+        }
+      }
+    }
+  ],
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/LoaderSource/Bcore/src/main/java/top/niunaijun/blackbox/fake/service/VpnCommonProxy.java"
+}
